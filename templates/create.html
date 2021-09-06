@@ -35,7 +35,7 @@
                 <button type="submit" class="create__form__join">J O I N</button>
             </div>
         </form>
-        {% with messages = get_flashed_messages() %}
+            {% with messages = get_flashed_messages() %}
                 {% if messages %}
                     {% for message in messages %}
                         <p class="error">{{ message }}</p>
