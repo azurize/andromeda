@@ -16,6 +16,7 @@ def create_app():
     def index():
         if 'email' in session:
             return 'You are logged in as ' + session['email']
+        
         return render_template('index.html')
 
     @app.route('/login/', methods=['GET', 'POST'])
@@ -30,6 +31,7 @@ def create_app():
                     session['email'] = request.form['email']
                     return redirect(url_for('index'))
             else: flash('Incorrect email/password combination!')
+                
         return render_template('login.html')
 
     @app.route('/create/', methods=['GET', 'POST'])
@@ -43,8 +45,7 @@ def create_app():
                 users.insert({'name' : request.form['name'], 'email' : request.form['email'], 'password' : hashed_pword})
                 session['email'] = request.form['email']
                 return redirect(url_for('index'))
-
-            return 'That email is already registered.'
+            else: flash('That email is already registered.')
 
         return render_template('create.html')
 
