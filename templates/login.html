@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Andromeda Login (Demo)</title>
+
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans" />
+
+</head>
+<body>
+    <div class="login">
+        <header class="login__title">
+                <h1 class="login__title__text">A N D R Ø M E D A</h1>
+        </header>
+        <main>
+            <form class="form" method="POST">
+                <div class="form__area">
+                    <p class="form__input">
+                        <label for="entry" class="form__label">Email</label>
+                        <input type="text" class="form__input__field" name="email" aria-label="Email">
+                    </p>
+                    <p class="form__input">
+                        <label for="entry" class="form__label">Password</label>
+                        <input type="password" class="form__input__field" name="password" aria-label="Passowrd">
+                    </p>
+                    <p class="form__register">Not Registered? <a class="form__create" href="/create/">Create an Account!</a></p>
+                    <button type="submit" class="form__login">L O G I N</button>
+            </div>
+            </form>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p class="error">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </main>
+        <footer>
+            <p class="footer">Created by <a class="name" href="https://github.com/Azurize">David Grabosky © 2021</a></p>
+        </footer>
+    </div>
+</body>
+</html>
