@@ -181,3 +181,9 @@ html {
     color: #24FF00;
     text-decoration: none;
 }
+
+.error {
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+}
