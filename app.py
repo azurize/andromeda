@@ -15,9 +15,8 @@ def create_app():
     @app.route('/')
     def index():
         if 'email' in session:
-            return 'You are logged in as ' + session['email']
-        
-        return render_template('index.html')
+            return render_template('index.html')
+        else: return redirect(url_for('login'))
 
     @app.route('/login/', methods=['GET', 'POST'])
     def login():
