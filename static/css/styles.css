@@ -24,6 +24,7 @@ html {
     font-size: 36px;
     color: #00F0FF;
     text-align: center;
+    text-shadow: 2px 2px 5px #00F0FF;
 }
 
 .create__title__text {
@@ -33,10 +34,11 @@ html {
 }
 
 .form {
-    background-color: #323030;
+    background-color: #1e1e1e;
     height: 405px;
     width:590px;
     border-radius: 15px;
+    opacity: .85;
 }
 
 .create__form {
