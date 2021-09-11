@@ -1,3 +1,5 @@
+/*  Basic page CSS */
+
 html {
     font-family: Droid Sans;
     background-color: #1e1e1e;
@@ -48,6 +50,7 @@ html {
     height: 520px;
     width: 590px;
     border-radius: 15px;
+    opacity: .85;
 }
 
 .form__area {
@@ -192,6 +195,8 @@ html {
     color: red;
     font-weight: bolder;
 }
+
+/* Starry night set up */
 
 @keyframes move-clouds-back {
     from {background-position: 0 0;}
