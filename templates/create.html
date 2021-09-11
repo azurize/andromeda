@@ -12,40 +12,45 @@
 
 </head>
 <body>
-<div class="create">
-    <header class="create__title">
-            <h1 class="create__title__text">A N D R Ø M E D A</h1>
-    </header>
-    <main>
-        <form class="create__form" method="POST">
-            <div class="create__form__area">
-                <p class="create__form__input">
-                    <label for="entry" class="create__form__label">Name</label>
-                    <input type="text" class="create__form__input__field" name="name" aria-label="Name">
-                </p>
-                <p class="create__form__input">
-                    <label for="entry" class="create__form__label">Email</label>
-                    <input type="text" class="create__form__input__field" name="email" aria-label="Email">
-                </p>
-                <p class="create__form__input">
-                    <label for="entry" class="create__form__label">Password</label>
-                    <input type="password" class="create__form__input__field" name="password" aria-label="Password">
-                </p>
-                <p class="create__form__register">Already Registered? <a class="create__form__create" href="/login/">Login!</a></p>
-                <button type="submit" class="create__form__join">J O I N</button>
-            </div>
-        </form>
-            {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                    {% for message in messages %}
-                        <p class="error">{{ message }}</p>
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}    
-    </main>
-    <footer>
-        <p class="create__footer">Created by <a class="create__name" href="https://github.com/Azurize">David Grabosky © 2021</a></p>
-    </footer>
-</div>
+    <div class="background">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+    </div>
+    <div class="create">
+        <header class="create__title">
+                <h1 class="create__title__text">A N D R Ø M E D A</h1>
+        </header>
+        <main>
+            <form class="create__form" method="POST">
+                <div class="create__form__area">
+                    <p class="create__form__input">
+                        <label for="entry" class="create__form__label">Name</label>
+                        <input type="text" class="create__form__input__field" name="name" aria-label="Name">
+                    </p>
+                    <p class="create__form__input">
+                        <label for="entry" class="create__form__label">Email</label>
+                        <input type="text" class="create__form__input__field" name="email" aria-label="Email">
+                    </p>
+                    <p class="create__form__input">
+                        <label for="entry" class="create__form__label">Password</label>
+                        <input type="password" class="create__form__input__field" name="password" aria-label="Password">
+                    </p>
+                    <p class="create__form__register">Already Registered? <a class="create__form__create" href="/login/">Login!</a></p>
+                    <button type="submit" class="create__form__join">J O I N</button>
+                </div>
+            </form>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p class="error">{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}    
+        </main>
+        <footer>
+            <p class="create__footer">Created by <a class="create__name" href="https://github.com/Azurize">David Grabosky © 2021</a></p>
+        </footer>
+    </div>
 </body>
 </html>
