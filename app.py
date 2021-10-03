@@ -1,6 +1,9 @@
+from datetime import timedelta
+from dotenv import load_dotenv
 from flask import Flask, flash, render_template, request, redirect, url_for, session
 from pymongo import MongoClient
-from dotenv import load_dotenv
+
+import primetrust
 import bcrypt
 import os
 
@@ -11,6 +14,11 @@ def create_app():
     app.secret_key = os.urandom(24)
     client = MongoClient(os.environ.get('MONGODB_URI'))
     app.db = client.andromeda
+
+    @app.before_request
+    def makeSessionPermanent():
+        session.permanent = True
+        app.permanent_session_lifetime = timedelta(minutes=10)
 
     @app.route('/')
     def index():

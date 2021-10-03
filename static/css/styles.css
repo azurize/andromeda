@@ -1,4 +1,4 @@
-/*  Basic page CSS */
+/*  Login/Create CSS */
 
 html {
     font-family: Droid Sans;
@@ -196,7 +196,7 @@ html {
     font-weight: bolder;
 }
 
-/* Starry night set up */
+/* Animated background CSS */
 
 @keyframes move-clouds-back {
     from {background-position: 0 0;}
@@ -236,3 +236,5 @@ html {
     opacity: .4;
     animation: move-clouds-back 200s linear infinite;
 }
+
+/* Index/Structural CSS */
