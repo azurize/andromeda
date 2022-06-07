@@ -17,46 +17,35 @@ ENV = os.environ.get('ENV')
 BASE_URL = f"https://{ENV}.primetrust.com"
 HEADERS = {"Authorization": "Bearer " + os.environ.get('TOKEN')}
 
-def create_accounts(
-    name :str, 
-    email : str, 
-    dob : str,
-    taxId : str, 
-    taxCountry : str,
-    street : str,
-    postalCode : str,
-    city : str,
-    region: str,
-    country: str
-):
+def create_accounts(**kwargs):
     path = f"{BASE_URL}/v2/accounts"
 
     payload = {
         "data": {
             "type": "accounts",
             "attributes": {
-                "name": name + "'s Account",
-                "authorized-signature": name,
+                "name": kwargs["name"] + "'s Account",
+                "authorized-signature": kwargs["name"],
                 "account-type": "custodial",
                 "owner" : {
                     "contact-type" : "natural_person",
-                    "name" : name,
-                    "email" : email,
-                    "date-of-birth" : dob,
-                    "tax-id-number" : taxId,
-                    "tax-country" : taxCountry,
+                    "name" : kwargs["name"],
+                    "email" : kwargs["email"],
+                    "date-of-birth" : kwargs["dob"],
+                    "tax-id-number" : kwargs["taxId"],
+                    "tax-country" : kwargs["taxCountry"],
                     "primary-phone-number" : {
                         "country" : "US",
                         "number" : "1234567890",
                         "sms" : False
                     },
                     "primary-address" : {
-                        "street-1" : street,
+                        "street-1" : kwargs["street"],
                         "street-2" : "",
-                        "postal-code" : postalCode,
-                        "city" : city,
-                        "region" : region,
-                        "country" : country
+                        "postal-code" : kwargs["postalCode"],
+                        "city" : kwargs["city"],
+                        "region" : kwargs["region"],
+                        "country" : kwargs["countr"]
                     }
                 }
             }
