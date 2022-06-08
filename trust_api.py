@@ -8,11 +8,6 @@ import requests
 
 load_dotenv()
 
-client = MongoClient(os.environ.get('MONGODB_URI'))
-db = client.andromeda
-users = db.users
-dbEmail = db.users.find_one({'email' : session.get('email')})
-
 ENV = os.environ.get('ENV')
 BASE_URL = f"https://{ENV}.primetrust.com"
 HEADERS = {"Authorization": "Bearer " + os.environ.get('TOKEN')}
