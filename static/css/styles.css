@@ -25,16 +25,16 @@ html {
 
 .login__title__text {
     font-size: 36px;
-    color: #00F0FF;
+    color: #4285F4;
     text-align: center;
-    text-shadow: 2px 2px 3px #00F0FF;
+    text-shadow: 2px 2px 3px #4285F4;
 }
 
 .create__title__text {
     font-size: 36px;
-    color: #24FF00;
+    color: #34A853;
     text-align: center;
-    text-shadow: 2px 2px 3px #24ff00;
+    text-shadow: 2px 2px 3px #34A853;
 }
 
 .form {
@@ -42,7 +42,7 @@ html {
     height: 405px;
     width: 590px;
     border-radius: 15px;
-    opacity: .85;
+    opacity: .90;
 }
 
 .create__form {
@@ -50,7 +50,7 @@ html {
     height: 520px;
     width: 590px;
     border-radius: 15px;
-    opacity: .85;
+    opacity: .90;
 }
 
 .form__area {
@@ -63,7 +63,7 @@ html {
 
 .form__label {
     display: block;
-    color: #00F0FF;
+    color: #4285F4;
     font-size: 18px;
     font-weight: bolder;
     padding-bottom: 6px;
@@ -71,7 +71,7 @@ html {
 
 .create__form__label {
     display: block;
-    color: #24FF00;
+    color: #34A853;
     font-size: 18px;
     font-weight: bolder;
     padding-bottom: 6px;
@@ -83,7 +83,7 @@ html {
     width: 480px;
     font-size: 18px;
     font-weight: bolder;
-    border: #00F0FF;
+    border: #4285F4;
     border-radius: 10px;
     padding-left: 10px;
 }
@@ -94,7 +94,7 @@ html {
     width: 480px;
     font-size: 18px;
     font-weight: bolder;
-    border: #24FF00;
+    border: #34A853;
     border-radius: 10px;
     padding-left: 10px;
 }
@@ -120,18 +120,18 @@ html {
 }
 
 .form__create {
-    color: #00F0FF;
+    color: #4285F4;
     text-decoration: none;
 }
 
 .create__form__create {
-    color: #24FF00;
+    color: #34A853;
     text-decoration: none;
 }
 
 .form__login {
     color: #323030;
-    background-color: #00F0FF;
+    background-color: #4285F4;
     font-size: 18px;
     font-weight: bolder;
     height: 50px;
@@ -143,7 +143,7 @@ html {
 
 .create__form__join {
     color: #323030;
-    background-color: #24FF00;
+    background-color: #34A853;
     font-size: 18px;
     font-weight: bolder;
     height: 50px;
@@ -155,12 +155,12 @@ html {
 
 
 .form__login:hover {
-    background-color: #009faa;
+    background-color: #274f91;
     cursor: pointer;
 }
 
 .create__form__join:hover {
-    background-color: #17ac00;
+    background-color: #1d5e2f;
     cursor: pointer;
 }
 
@@ -181,12 +181,12 @@ html {
 }
 
 .name {
-    color: #00F0FF;
+    color: #4285F4;
     text-decoration: none;
 }
 
 .create__name {
-    color: #24FF00;
+    color: #34A853;
     text-decoration: none;
 }
 
