@@ -97,7 +97,7 @@ def create_app():
             cursor = connection.cursor()
 
             try:
-                sql = 'SELECT username FROM users WHERE username = (%s);'
+                sql = 'SELECT username FROM users WHERE username = %s;'
                 params = [user.email]
                 cursor.execute(sql, params)
             except Exception as e:
