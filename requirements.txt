@@ -1,6 +1,6 @@
 bcrypt
 flask
-pymongo[srv]
+psycopg2
 gunicorn
 python-dotenv
 requests
