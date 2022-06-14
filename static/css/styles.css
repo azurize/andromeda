@@ -238,6 +238,8 @@ html {
 }
 
 /* Index/Structural CSS */
+
+/* Navbar */
 .navbar {
     text-align: center;
     background-color: #323030;
@@ -254,6 +256,36 @@ html {
     color: #5E5E5E;
 }
 
-.navbar .current {
+.dash_navbar .current {
     color: #FFFFFF;
+    padding-bottom: 9px;
+    border-bottom: 4px solid #4285F4;
+}
+
+.dash_indicator {
+    color: #FFFFFF;
+}
+
+.acct_navbar .current {
+    color: #FFFFFF;
+    padding-bottom: 9px;
+    border-bottom: 4px solid #34A853;
+}
+
+.fiat_navbar .current {
+    color: #FFFFFF;
+    padding-bottom: 9px;
+    border-bottom: 4px solid #FBBC05;
+}
+
+.crypto_navbar .current {
+    color: #FFFFFF;
+    padding-bottom: 9px;
+    border-bottom: 4px solid #EA4335;
+}
+
+.about_navbar .current {
+    color: #FFFFFF;
+    padding-bottom: 9px;
+    border-bottom: 4px solid #FFFFFF;
 }
