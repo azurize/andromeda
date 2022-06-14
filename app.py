@@ -130,6 +130,35 @@ def create_app():
 
         return render_template('create.html')
 
+    @app.route('/account/', methods=['GET', 'POST'])
+    def account():
+        if 'email' in session:
+            return render_template('account.html')
+        else:
+            return redirect(url_for('login'))
+    
+    @app.route('/fiat/', methods=['GET', 'POST'])
+    def fiat():
+        if 'email' in session:
+            return render_template('fiat.html')
+        else:
+            return redirect(url_for('login'))
+    
+    @app.route('/crypto/', methods=['GET', 'POST'])
+    def crypto():
+        if 'email' in session:
+            return render_template('crypto.html')
+        else:
+            return redirect(url_for('login'))
+
+    @app.route('/about/', methods=['GET', 'POST'])
+    def about():
+        if 'email' in session:
+            return render_template('about.html')
+        else:
+            return redirect(url_for('login'))
+
+
     if __name__ == '__main__':
         app.secret_key
         app.run(debug=True)
