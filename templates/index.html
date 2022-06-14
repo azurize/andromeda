@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Andromeda Dashboard{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='/css/styles.css') }}">
-</head>
-<body>
-    <h1>TEST SCREEN - IF YOU REACHED THIS, YOU SUCCESSFULLY LOGGED IN</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dashboard (Demo)</title>
+
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Droid+Sans"
+    />
+  </head>
+  <body>
+    <div class="dashboard">
+      <header class="navbar">
+        <a class="current" href="/">DASHBOARD</a>
+        <a href="/account/">ACCOUNT</a>
+        <a href="/fiat/">FIAT</a>
+        <a href="/crypto/">CRYPTO</a>
+        <a href="/about/">ABOUT</a>
+      </header>
+    </div>
+  </body>
 </html>
